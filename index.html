@@ -35,6 +35,28 @@
 .mc-overlay{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .16s var(--ease)} .mc-overlay.open{opacity:1;pointer-events:auto} .mc-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.54);-webkit-backdrop-filter:blur(18px) saturate(118%);backdrop-filter:blur(18px) saturate(118%)} .server-pop{position:relative;z-index:2;width:min(360px,calc(100vw - 34px));border-radius:28px;padding:20px;transform:translateY(10px) scale(.97);transition:transform .16s var(--ease)} .mc-overlay.open .server-pop{transform:none} .mc-close{position:absolute;right:14px;top:13px;z-index:4;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);cursor:pointer} .server-head{position:relative;z-index:2;display:flex;justify-content:space-between;gap:12px;padding-right:36px;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)} .mc-live{display:flex;align-items:center;gap:6px} .mc-live i{width:7px;height:7px;border-radius:50%;background:#858890} .mc-live.online i{background:var(--green);box-shadow:0 0 11px rgba(85,232,145,.65)} .server-ip{position:relative;z-index:2;margin-top:14px;font-size:24px;font-weight:700} .server-meta{position:relative;z-index:2;margin-top:6px;color:var(--muted);font-size:11px} .copy{position:relative;z-index:2;margin-top:14px;width:100%;height:42px;border-radius:14px;background:rgba(255,255,255,.94);color:#050506;font-size:11px;font-weight:700;cursor:pointer}
 .info-card{min-height:520px;display:flex;flex-direction:column;justify-content:center}.info-wrap{position:relative;z-index:2;max-width:690px;margin:auto;width:100%}.info-mark{width:72px;height:72px;border-radius:24px;display:grid;place-items:center;margin-bottom:22px;background:linear-gradient(145deg,rgba(255,143,199,.22),rgba(255,79,167,.08));border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.30),0 0 34px rgba(255,112,180,.16);font-size:30px;font-weight:800;color:#fff}.info-title{margin:0;font-size:clamp(31px,4vw,44px);letter-spacing:-.05em;line-height:1}.info-lead{margin-top:18px;font-size:18px;line-height:1.7;color:rgba(255,255,255,.88);max-width:620px}.info-note{margin-top:24px;padding:20px 22px;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 0 30px rgba(255,112,180,.07)}.info-note strong{color:#fff}.info-note p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}.info-note p+p{margin-top:10px}.info-signoff{margin-top:24px;color:rgba(255,255,255,.40);font-size:12px;letter-spacing:.02em}
 @media(max-width:850px){.stage{align-items:start;padding:18px 18px 96px}.app-shell{width:min(720px,100%);grid-template-columns:1fr;gap:14px}.sidebar{position:fixed;left:50%;bottom:16px;top:auto;z-index:60;transform:translateX(-50%);flex-direction:row;border-radius:25px;padding:8px}.brand-mark{display:none}.nav-tip{display:none}.tool-card{min-height:0}} @media(max-width:620px){.card,.tool-card{padding:23px 21px 21px;border-radius:30px}.top{grid-template-columns:88px minmax(0,1fr);gap:17px}.avatar-wrap,.avatar{width:88px;height:88px}.username{font-size:27px}.activity{grid-template-columns:48px minmax(0,1fr);padding:15px;gap:12px}.activity-art{width:48px;height:48px}.activity-time{display:none}.controls{grid-template-columns:1fr}.primary{width:100%}.tool-title{font-size:28px}} @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#petals{display:none}}
+
+/* Fixed 1080p / 60 FPS processing surface. */
+.quality-card .tool-sub{font-size:16px}.quality-card .tool-badge{font-size:12px}
+.quality-profile{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;position:relative;z-index:2}
+.quality-profile span{border:1px solid rgba(255,143,199,.18);background:rgba(255,143,199,.055);padding:12px 16px;border-radius:16px;color:var(--muted);font-size:14px}.quality-profile strong{color:#fff;margin-right:4px}
+.quality-card .dropzone{min-height:185px;margin-top:18px}.quality-card .drop-main{font-size:18px}.quality-card .drop-sub{font-size:14px}.quality-card .file-chip{font-size:14px;overflow-wrap:anywhere;word-break:break-word;max-width:100%}
+.quality-card .locked{pointer-events:none;opacity:.65}
+.quality-method{position:relative;z-index:2;margin-top:20px}
+.quality-method .seg{display:flex;gap:8px}.quality-method .seg button{flex:1;min-width:0;height:auto;min-height:46px;padding:12px 14px;font-size:14px;line-height:1.4}.quality-method .seg button:disabled{cursor:wait;opacity:.65}
+.quality-method-help{margin:10px 0 0;color:var(--muted);font-size:14px;line-height:1.65;min-height:4.95em}
+.quality-source{position:relative;z-index:2;display:grid;grid-template-columns:138px minmax(0,1fr);gap:20px;align-items:center;margin-top:20px;padding:16px;border:1px solid rgba(255,255,255,.10);border-radius:20px;background:rgba(0,0,0,.12)}
+.quality-source video{width:138px;height:148px;object-fit:contain;border-radius:12px;background:#09090b}
+.quality-source p{font-size:14px;line-height:1.6;margin:4px 0 10px;overflow-wrap:anywhere}.quality-card .control-label{font-size:12px}.quality-hint{color:var(--muted);margin-bottom:0!important}
+.quality-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:22px;position:relative;z-index:2}.quality-actions .primary{font-size:14px;min-width:170px}.quality-local{font-size:14px;color:var(--muted)}
+.quality-cancel{padding:12px 18px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.06);color:#fff;font-size:14px;cursor:pointer}
+.quality-steps{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px;color:rgba(255,255,255,.44);font-size:12px}.quality-steps .current{color:#ffabd2}
+.quality-card .status-text,.quality-card .result-sub{font-size:14px;line-height:1.5}.quality-card .status-pct{font-size:12px}.quality-card .status-box{margin-top:12px}.quality-card .download{font-size:14px;white-space:nowrap}
+.quality-output{display:block;width:100%;max-height:380px;background:#08080a;border-radius:18px;margin-top:18px;position:relative;z-index:2}
+.quality-note{font-size:13px;line-height:1.7;margin-top:20px}.quality-card button:focus-visible,.quality-card a:focus-visible{outline:2px solid #ffabd2;outline-offset:4px}.quality-card .dropzone:focus-within{outline:2px solid #ffabd2;outline-offset:4px}
+[hidden]{display:none!important}
+@media(max-width:620px){.quality-profile{gap:8px}.quality-profile span{flex:1;padding:10px;font-size:14px}.quality-source{grid-template-columns:1fr}.quality-source video{width:100%;height:180px}.quality-card .tool-head{display:block}.quality-card .tool-badge{display:inline-block;margin-top:12px}.quality-card .tool-badge{padding:7px;white-space:nowrap;font-size:12px}.quality-actions .primary{width:auto;flex:1}.quality-local{width:100%}.quality-card .result{flex-wrap:wrap;gap:12px}.quality-card .download{width:100%;text-align:center}}
+
 </style>
 </head>
 <body>
@@ -43,7 +65,7 @@
   <aside class="sidebar glass" aria-label="Site sections">
     <div class="brand-mark">V</div>
     <button class="nav-btn active" data-page="home" aria-label="Home"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5v9a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19.5v-9Z"/><path d="M9 21v-6h6v6"/></svg><span class="nav-tip">home</span></button>
-    <button class="nav-btn" data-page="quality" aria-label="FPS quality tool"><svg viewBox="0 0 24 24"><path d="m13 2-2 8h7l-9 12 2-8H4L13 2Z"/></svg><span class="nav-tip">quality method</span></button>
+    <button class="nav-btn" data-page="quality" aria-label="TikTok 1080p 60 FPS quality tool"><svg viewBox="0 0 24 24"><path d="m13 2-2 8h7l-9 12 2-8H4L13 2Z"/></svg><span class="nav-tip">quality method</span></button>
     <button class="nav-btn" data-page="compress" aria-label="Video compressor"><svg viewBox="0 0 24 24"><path d="M8 3h8l4 4v14H4V3h4Z"/><path d="M9 3v5h6V3M9 14h6M9 17h6"/></svg><span class="nav-tip">compressor</span></button>
     <button class="nav-btn" data-page="info" aria-label="Info and credits"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 10v6M12 7.2h.01"/></svg><span class="nav-tip">info / credits</span></button>
   </aside>
@@ -55,13 +77,25 @@
       </section>
       <nav class="dock glass" aria-label="Links"><a class="icon-btn brand" href="https://www.tiktok.com/@9371x" target="_blank" rel="noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 3c.35 2.03 1.56 3.44 3.4 3.9v3.15a8.13 8.13 0 0 1-3.38-.84v6.25a6.46 6.46 0 1 1-5.58-6.4v3.28a3.27 3.27 0 1 0 2.36 3.12V3h3.2Z"/></svg></a><a class="icon-btn brand" href="https://discord.gg/t8PusVdszK" target="_blank" rel="noreferrer" aria-label="Discord server"><svg viewBox="0 0 24 24"><path d="M19.5 5.34A16.2 16.2 0 0 0 15.44 4l-.5 1.02a15.26 15.26 0 0 0-5.88 0L8.55 4a16.3 16.3 0 0 0-4.06 1.35C1.92 9.18 1.22 12.92 1.57 16.6a16.3 16.3 0 0 0 4.98 2.51l1.2-1.64a10.4 10.4 0 0 1-1.88-.9l.46-.35c3.63 1.68 7.57 1.68 11.16 0l.47.35c-.6.35-1.23.65-1.88.9l1.2 1.64a16.2 16.2 0 0 0 4.98-2.51c.4-4.25-.68-7.95-2.86-11.26ZM8.6 14.35c-1.08 0-1.97-.99-1.97-2.2 0-1.22.87-2.21 1.97-2.21 1.11 0 1.99 1 1.97 2.21 0 1.21-.87 2.2-1.97 2.2Zm6.8 0c-1.08 0-1.97-.99-1.97-2.2 0-1.22.87-2.21 1.97-2.21 1.11 0 1.99 1 1.97 2.21 0 1.21-.86 2.2-1.97 2.2Z"/></svg></a><a class="icon-btn" href="https://discord.com/users/308312562858983424" target="_blank" rel="noreferrer"><span class="uid-label">UID</span></a><button class="icon-btn stroke" id="mcBtn" type="button"><svg viewBox="0 0 24 24"><path d="M4 5.8 12 2l8 3.8v12.4L12 22l-8-3.8V5.8Z"/><path d="m4 5.8 8 3.9 8-3.9M12 9.7V22"/></svg></button></nav>
     </div></div>
-    <div class="page" id="page-quality"><section class="tool-card glass"><div class="tool-head"><div><div class="eyebrow">creator tool 01</div><h2 class="tool-title">FPS / Quality Method</h2><div class="tool-sub">Your TikTok method turned into a browser tool. Pick a video, choose 60 / 120 / 240, and it runs locally on the member's PC — nothing is uploaded. (60 is recommended)</div></div><span class="tool-badge">free • local</span></div><label class="dropzone" id="qualityDrop"><input id="qualityInput" type="file" accept="video/*,.mkv,.m4v,.avi,.webm"><div><div class="drop-icon"><svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M5 20h14"/></svg></div><div class="drop-main">Drop a video here</div><div class="drop-sub">or click to choose • MP4 / MOV / MKV / AVI / WEBM / M4V</div><div class="file-chip" id="qualityFile"></div></div></label><div class="controls"><div><div class="control-label">video fps</div><div class="seg" id="fpsSeg"><button class="active" data-fps="60" data-scale="2">60 FPS</button><button data-fps="120" data-scale="6">120 FPS</button><button data-fps="240" data-scale="12">240 FPS</button></div></div><button class="primary" id="qualityRun" disabled>process video</button></div><div class="status-box"><div class="status-row"><span class="status-text" id="qualityStatus">Choose a video to begin.</span><span class="status-pct" id="qualityPct">0%</span></div><div class="bar"><i id="qualityBar"></i></div></div><div class="result" id="qualityResult"><div class="result-copy"><div class="result-title">Finished ✦</div><div class="result-sub" id="qualityResultSub"></div></div><a class="download" id="qualityDownload">download</a></div><div class="fineprint">This reproduces the FFmpeg timestamp-scale method you supplied (60→2×, 120→6×, 240→12×). It does not generate extra interpolated frames. The first run downloads a browser FFmpeg engine, so it can take a moment.</div></section></div>
+    <div class="page" id="page-quality"><section class="tool-card glass quality-card">
+      <div class="tool-head"><div><div class="eyebrow">valedits / creator tool 01</div><h2 class="tool-title">TikTok Quality Method</h2><div class="tool-sub">Choose your processing method, add your edit, then download a 1080p / 60 FPS MP4.</div></div><span class="tool-badge">free · local</span></div>
+      <div class="quality-profile"><span><strong>1080p</strong> resolution</span><span><strong>60 FPS</strong> video</span><span><strong id="qualityProfileMethod">PC method</strong> local</span></div>
+      <div class="quality-method"><div class="control-label" id="qualityMethodLabel">processing method</div><div class="seg" id="qualityMethodSeg" role="group" aria-labelledby="qualityMethodLabel" aria-describedby="qualityMethodHelp"><button type="button" class="active" data-method="pc" aria-pressed="true">1080p / 60 FPS · PC</button><button type="button" data-method="ffmpeg" aria-pressed="false">FFmpeg</button></div><p class="quality-method-help" id="qualityMethodHelp">Best on a desktop browser. Applies the experimental MP4 quality patch. Compatible 1080p / 60 FPS edits keep their original video and AAC audio; other clips are converted first.</p></div>
+      <label class="dropzone" id="qualityDrop"><input id="qualityInput" type="file" accept="video/*,.mkv,.m4v,.avi,.webm"><div><div class="drop-icon"><svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M5 20h14"/></svg></div><div class="drop-main">Drop your edit here</div><div class="drop-sub">or click to choose a video · processed on your device</div><div class="file-chip" id="qualityFile"></div></div></label>
+      <div class="quality-source" id="qualitySource" hidden><video id="qualityPreview" controls playsinline preload="metadata" aria-label="Selected video preview"></video><div><div class="control-label">your video</div><p id="qualitySourceInfo"></p><div class="control-label">export</div><p id="qualityTargetInfo"></p><p class="quality-hint" id="qualityHint"></p></div></div>
+      <div class="quality-actions"><button class="primary" id="qualityRun" disabled>process video</button><button class="quality-cancel" id="qualityCancel" type="button" hidden>cancel</button><span class="quality-local">Your video stays on your device.</span></div>
+      <div class="quality-steps" aria-label="Processing stages"><span id="qualityStep1">01 · read video</span><span id="qualityStep2">02 · patch MP4</span><span id="qualityStep3">03 · verify patch</span></div>
+      <div class="status-box" role="status" aria-live="polite"><div class="status-row"><span class="status-text" id="qualityStatus">Choose a video to begin.</span><span class="status-pct" id="qualityPct">0%</span></div><div class="bar" role="progressbar" aria-label="Video processing" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="qualityProgress"><i id="qualityBar"></i></div></div>
+      <div class="result" id="qualityResult"><div class="result-copy"><div class="result-title" id="qualityResultTitle">Your PC edit is ready ✦</div><div class="result-sub" id="qualityResultSub"></div></div><a class="download" id="qualityDownload">download MP4</a></div>
+      <video id="qualityOutputPreview" class="quality-output" controls playsinline hidden aria-label="Processed video preview"></video>
+      <div class="fineprint quality-note">Both options keep your aspect ratio and normal playback speed. Lower-FPS clips repeat frames rather than gaining new motion. The PC method uses an experimental MP4 metadata patch. TikTok may change resolution or FPS after upload; neither option guarantees 1080p / 60 FPS playback on desktop or mobile.</div>
+    </section></div>
     <div class="page" id="page-compress"><section class="tool-card glass"><div class="tool-head"><div><div class="eyebrow">creator tool 02</div><h2 class="tool-title">90 MB Compressor</h2><div class="tool-sub">A browser version based on your HandBrake Recommended preset. It keeps the original timing/FPS, caps the picture inside 1080×1200 without upscaling, prefers HEVC when the browser supports it, and aims just under 90 MB.</div></div><span class="tool-badge">best effort</span></div><label class="dropzone" id="compressDrop"><input id="compressInput" type="file" accept="video/*,.mkv,.m4v,.avi,.webm"><div><div class="drop-icon"><svg viewBox="0 0 24 24"><path d="M8 3h8l4 4v14H4V3h4Z"/><path d="M9 12h6M9 15h6M9 18h6"/></svg></div><div class="drop-main">Drop a video over 90 MB</div><div class="drop-sub">everything stays in your browser</div><div class="file-chip" id="compressFile"></div></div></label><div class="controls"><div><div class="control-label">target</div><div class="seg"><button class="active" type="button">≈ 90 MB</button></div></div><button class="primary" id="compressRun" disabled>compress video</button></div><div class="status-box"><div class="status-row"><span class="status-text" id="compressStatus">Choose a video over 90 MB.</span><span class="status-pct" id="compressPct">0%</span></div><div class="bar"><i id="compressBar"></i></div></div><div class="result" id="compressResult"><div class="result-copy"><div class="result-title">Compressed ✦</div><div class="result-sub" id="compressResultSub"></div></div><a class="download" id="compressDownload">download</a></div><div class="fineprint">Preset mapping: MP4 • Fast Start • no crop/denoise/sharpen • max 1080×1200 • no upscaling • original CFR-style FPS • HEVC/H.265 preferred with H.264 fallback • AAC stereo 320 kb/s. The size target uses a calculated video bitrate instead of RF14, because RF14 cannot guarantee a ~90 MB file. Everything stays on the member’s PC.</div></section></div>
-    <div class="page" id="page-info"><section class="tool-card glass info-card"><div class="info-wrap"><div class="info-mark">i</div><div class="eyebrow">site info</div><h2 class="info-title">Credits & transparency</h2><div class="info-lead">I do not take credit for anything made for this website. Everything on the site was made using AI, except for the <strong>Quality Method</strong>, which I made :p</div><div class="info-note"><p><strong>Just keeping it public and clear.</strong> The design, website code, UI, animations and other site features were created with AI assistance.</p><p>The FPS / Quality Method is my own method and is the exception.</p></div><div class="info-signoff">— valedits</div></div></section></div>
+    <div class="page" id="page-info"><section class="tool-card glass info-card"><div class="info-wrap"><div class="info-mark">i</div><div class="eyebrow">site info</div><h2 class="info-title">Credits & transparency</h2><div class="info-lead">The design and website code were created with AI assistance. The current <strong>Quality Method</strong> reproduces container changes measured in a Haze-processed video reference.</div><div class="info-note"><p><strong>Just keeping it public and clear.</strong> The design, website code, UI, animations and other site features were created with AI assistance.</p><p>The reference patch was reconstructed by comparing supplied original and Haze-processed MP4 files.</p></div><div class="info-signoff">— valedits</div></div></section></div>
   </section>
 </div></main>
 <div class="mc-overlay" id="mcOverlay" aria-hidden="true"><div class="mc-backdrop" id="mcBackdrop"></div><section class="server-pop glass"><button class="mc-close" id="mcClose">×</button><div class="server-head"><span>Minecraft server</span><span class="mc-live" id="mcLive"><i></i><span>checking</span></span></div><div class="server-ip">valedits.xyz</div><div class="server-meta" id="serverMeta">Java · checking…</div><button class="copy" id="copyIp">COPY IP</button></section></div>
-<script src="https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js"></script>
+
 <script>
 (()=>{
 const DISCORD_ID='308312562858983424',MC_DOMAIN='valedits.xyz',MC_QUERY='51.38.155.236:20418'; const $=id=>document.getElementById(id);
@@ -75,8 +109,515 @@ const statusNames={online:'online',idle:'away',dnd:'dnd',offline:'offline'};let 
 // Minecraft
 const overlay=$('mcOverlay');function mcOpen(v){overlay.classList.toggle('open',v);overlay.setAttribute('aria-hidden',String(!v))}$('mcBtn').onclick=()=>mcOpen(true);$('mcClose').onclick=()=>mcOpen(false);$('mcBackdrop').onclick=()=>mcOpen(false);$('copyIp').onclick=async()=>{try{await navigator.clipboard.writeText(MC_DOMAIN);$('copyIp').textContent='COPIED ✓'}catch{$('copyIp').textContent=MC_DOMAIN}setTimeout(()=>$('copyIp').textContent='COPY IP',1300)};async function mc(){try{const r=await fetch(`https://api.mcstatus.io/v2/status/java/${encodeURIComponent(MC_QUERY)}?query=false&timeout=4`,{cache:'no-store'}),j=await r.json();$('mcLive').classList.toggle('online',!!j.online);$('mcLive').querySelector('span').textContent=j.online?'online':'offline';$('serverMeta').textContent=`Java · ${j.version?.name_clean||j.version?.name||'unknown'}${j.online&&Number.isFinite(j.players?.online)?` · ${j.players.online}/${j.players.max} players`:''}`}catch{$('mcLive').querySelector('span').textContent='unknown'}}mc();setInterval(mc,60000);
 // media tools
-let ffmpeg=null,ffmpegLoaded=false,activeProgress=null,jobBusy=false;function fmtMB(bytes){return (bytes/1024/1024).toFixed(1)+' MB'}function safeName(n){return n.replace(/[^a-zA-Z0-9._-]+/g,'_')}async function ensureFFmpeg(status){if(ffmpegLoaded)return true;if(!window.FFmpeg?.createFFmpeg)throw new Error('Video engine failed to load. Refresh and try again.');status('Loading video engine (~25–30 MB)…');const {createFFmpeg}=window.FFmpeg;ffmpeg=createFFmpeg({log:false,mainName:'main',corePath:'https://unpkg.com/@ffmpeg/core-st@0.11.1/dist/ffmpeg-core.js'});ffmpeg.setProgress(({ratio})=>{if(activeProgress)activeProgress(Math.max(0,Math.min(99,Math.round((ratio||0)*100))))});await ffmpeg.load();ffmpegLoaded=true;status('Video engine ready.');return true}function getMeta(file){return new Promise((resolve,reject)=>{const v=document.createElement('video'),url=URL.createObjectURL(file);v.preload='metadata';v.onloadedmetadata=()=>{const out={duration:v.duration,width:v.videoWidth,height:v.videoHeight};URL.revokeObjectURL(url);resolve(out)};v.onerror=()=>{URL.revokeObjectURL(url);reject(new Error('Could not read video metadata.'))};v.src=url})}function wireDrop(drop,input,onFile){['dragenter','dragover'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.add('drag')}));['dragleave','drop'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.remove('drag')}));drop.addEventListener('drop',e=>{const f=e.dataTransfer.files?.[0];if(f)onFile(f)});input.addEventListener('change',()=>{const f=input.files?.[0];if(f)onFile(f)})}
-let qualityFile=null,qualityScale='2',qualityFPS='60',qualityURL=null;const qStatus=t=>$('qualityStatus').textContent=t,qProg=n=>{$('qualityPct').textContent=n+'%';$('qualityBar').style.width=n+'%'};wireDrop($('qualityDrop'),$('qualityInput'),f=>{qualityFile=f;$('qualityFile').textContent=`${f.name} · ${fmtMB(f.size)}`;$('qualityFile').classList.add('show');$('qualityRun').disabled=false;$('qualityResult').classList.remove('show');qStatus('Ready to process.');qProg(0)});for(const b of $('fpsSeg').querySelectorAll('button'))b.onclick=()=>{$('fpsSeg').querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));qualityScale=b.dataset.scale;qualityFPS=b.dataset.fps};$('qualityRun').onclick=async()=>{if(!qualityFile||jobBusy)return;jobBusy=true;$('qualityRun').disabled=true;$('qualityResult').classList.remove('show');try{activeProgress=qProg;await ensureFFmpeg(qStatus);const ext=(qualityFile.name.match(/\.[a-z0-9]+$/i)||['.mp4'])[0],inName='quality_input'+ext,outName='quality_output.mp4';qStatus('Loading your video into the browser engine…');ffmpeg.FS('writeFile',inName,await window.FFmpeg.fetchFile(qualityFile));qStatus(`Processing ${qualityFPS} FPS method…`);await ffmpeg.run('-y','-itsscale',qualityScale,'-i',inName,'-c:v','copy','-c:a','copy',outName);const data=ffmpeg.FS('readFile',outName);if(qualityURL)URL.revokeObjectURL(qualityURL);qualityURL=URL.createObjectURL(new Blob([data.buffer],{type:'video/mp4'}));$('qualityDownload').href=qualityURL;$('qualityDownload').download=safeName(qualityFile.name.replace(/\.[^.]+$/,'')+'_output.mp4');$('qualityResultSub').textContent=`${fmtMB(data.length)} · ${qualityFPS} FPS method`;$('qualityResult').classList.add('show');qProg(100);qStatus('Done.');try{ffmpeg.FS('unlink',inName);ffmpeg.FS('unlink',outName)}catch{}}catch(e){console.error(e);qStatus('Failed: '+(e?.message||'this format/codec could not be processed'));qProg(0)}finally{activeProgress=null;jobBusy=false;$('qualityRun').disabled=!qualityFile}};
+let ffmpeg=null,ffmpegLoaded=false,activeProgress=null,jobBusy=false;function fmtMB(bytes){return (bytes/1024/1024).toFixed(1)+' MB'}function safeName(n){return n.replace(/[^a-zA-Z0-9._-]+/g,'_')}// Single-thread FFmpeg runs inside a Worker so the page and Cancel stay responsive.
+function qualityFFmpegWorker(){
+  // The 0.11 browser wrapper reads document.baseURI during initialization.
+  self.document={baseURI:self.location.href};
+  let engine;
+  self.onmessage=async({data:m})=>{
+    try{
+      let result;
+      if(m.action==='load'){
+        importScripts(m.args[0].wrapper);
+        engine=self.FFmpeg.createFFmpeg({log:false,mainName:'main',workerPath:'data:text/javascript,',corePath:m.args[0].core,wasmPath:m.args[0].wasm});
+        engine.setProgress(({ratio})=>self.postMessage({progress:Math.max(0,Math.min(99,Math.round((ratio||0)*100)))}));
+        await engine.load();result=true;
+      }else if(m.action==='run'){await engine.run(...m.args);result=true}
+      else if(m.action==='FS'){result=engine.FS(...m.args)}
+      if(result instanceof Uint8Array){
+        // Copy out of WASM memory before transferring ownership to the page.
+        result=new Uint8Array(result);self.postMessage({id:m.id,result},[result.buffer]);
+      }else self.postMessage({id:m.id,result});
+    }catch(e){self.postMessage({id:m.id,error:e?.message||String(e)})}
+  };
+}
+const qualityAssetCache=new Map();
+function createQualityEngine(){
+  const sourceURL=URL.createObjectURL(new Blob(['('+qualityFFmpegWorker.toString()+')()'],{type:'text/javascript'}));
+  const worker=new Worker(sourceURL);URL.revokeObjectURL(sourceURL);
+  const pending=new Map();let sequence=0,closed=false;
+  function fail(error){for(const p of pending.values())p.reject(error);pending.clear()}
+  worker.onmessage=({data:m})=>{
+    if(m.progress!==undefined){activeProgress?.(m.progress);return}
+    const p=pending.get(m.id);if(!p)return;pending.delete(m.id);
+    if(m.error)p.reject(new Error(m.error));else p.resolve(m.result);
+  };
+  worker.onerror=e=>{closed=true;worker.terminate();fail(new Error(e.message||'The video engine stopped. Please try again.'))};
+  function call(action,args=[]){
+    if(closed)return Promise.reject(new Error('Processing cancelled.'));
+    return new Promise((resolve,reject)=>{
+      const id=++sequence;pending.set(id,{resolve,reject});
+      const transfer=action==='FS'&&args[0]==='writeFile'?[args[2].buffer]:[];
+      worker.postMessage({id,action,args},transfer);
+    });
+  }
+  const assetURLs=[];
+  async function asset(url,type){
+    let cached=qualityAssetCache.get(url);
+    if(!cached){
+      cached=(async()=>{
+        const response=await fetch(url);
+        if(!response.ok)throw new Error('Could not download FFmpeg. Check your connection.');
+        return new Blob([await response.arrayBuffer()],{type});
+      })();
+      qualityAssetCache.set(url,cached);
+      cached.catch(()=>{if(qualityAssetCache.get(url)===cached)qualityAssetCache.delete(url)});
+    }
+    const blobURL=URL.createObjectURL(await cached);assetURLs.push(blobURL);return blobURL;
+  }
+  async function load(){
+    try{
+      let wrapper;
+      try{wrapper=await asset('https://unpkg.com/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js','text/javascript')}
+      catch{wrapper=await asset('https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.6/dist/ffmpeg.min.js','text/javascript')}
+      const [core,wasm]=await Promise.all([
+        asset('https://unpkg.com/@ffmpeg/core-st@0.11.1/dist/ffmpeg-core.js','text/javascript'),
+        asset('https://unpkg.com/@ffmpeg/core-st@0.11.1/dist/ffmpeg-core.wasm','application/wasm')
+      ]);
+      return await call('load',[{wrapper,core,wasm}]);
+    }finally{for(const url of assetURLs)URL.revokeObjectURL(url);assetURLs.length=0}
+  }
+  return {load,run:(...args)=>call('run',args),FS:(...args)=>call('FS',args),exit:()=>{closed=true;worker.terminate();fail(new Error('Processing cancelled.'));for(const url of assetURLs)URL.revokeObjectURL(url);assetURLs.length=0}};
+}
+async function ensureFFmpeg(status){
+  if(ffmpegLoaded)return true;
+  qThrowIfCancelled();status('Loading FFmpeg (~30 MB on the first run)…');
+  const engine=createQualityEngine();ffmpeg=engine;let timeout;
+  try{
+    await Promise.race([engine.load(),new Promise((_,reject)=>{timeout=setTimeout(()=>reject(new Error('Video engine download timed out. Please try again.')),90000)})]);
+    qThrowIfCancelled();ffmpegLoaded=true;
+  }catch(e){engine.exit();ffmpeg=null;ffmpegLoaded=false;throw e}
+  finally{clearTimeout(timeout)}
+  return true;
+}
+function getMeta(file){return new Promise((resolve,reject)=>{const v=document.createElement('video'),url=URL.createObjectURL(file);v.preload='metadata';v.onloadedmetadata=()=>{const out={duration:v.duration,width:v.videoWidth,height:v.videoHeight};URL.revokeObjectURL(url);resolve(out)};v.onerror=()=>{URL.revokeObjectURL(url);reject(new Error('Could not read video metadata.'))};v.src=url})}function wireDrop(drop,input,onFile){['dragenter','dragover'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.add('drag')}));['dragleave','drop'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.remove('drag')}));drop.addEventListener('drop',e=>{const f=e.dataTransfer.files?.[0];if(f)onFile(f)});input.addEventListener('change',()=>{const f=input.files?.[0];if(f)onFile(f)})}
+// Reproduces the container changes measured in the user-supplied reference.
+// The extra sample-size/chunk entries deliberately have no additional timing entries.
+// This is experimental ingestion metadata, not new video frames or a playback guarantee.
+function createReferencePatcher(){
+  const encoder=new TextEncoder(),containers=new Set(['moov','trak','mdia','minf','stbl','edts','udta','dinf','ilst']);
+  const dummy=new Uint8Array([0,0,0,4,0,0,0,0]);
+  const view=b=>new DataView(b.buffer,b.byteOffset,b.byteLength);
+  const read32=(b,p)=>view(b).getUint32(p);
+  const read64=(b,p)=>{const n=Number(view(b).getBigUint64(p));if(!Number.isSafeInteger(n))throw new Error('This file is too large to patch safely.');return n};
+  const write32=(b,p,n)=>{if(!Number.isInteger(n)||n<0||n>4294967295)throw new Error('MP4 table value is out of range.');view(b).setUint32(p,n)};
+  const typeAt=(b,p)=>String.fromCharCode(...b.subarray(p,p+4));
+  const concat=(parts)=>{const b=new Uint8Array(parts.reduce((n,p)=>n+p.length,0));let o=0;for(const p of parts){b.set(p,o);o+=p.length}return b};
+  function atom(type,data){const b=new Uint8Array(data.length+8);write32(b,0,b.length);for(let i=0;i<4;i++)b[i+4]=type.charCodeAt(i);b.set(data,8);return b}
+  function parse(b,start=0,end=b.length,depth=0){
+    if(depth>16)throw new Error('The MP4 box structure is too deeply nested.');
+    const nodes=[];let p=start;
+    while(p<end){
+      if(p+8>end)throw new Error('The MP4 has a truncated box header.');
+      let size=read32(b,p),header=8;const type=typeAt(b,p+4);
+      if(size===1){if(p+16>end)throw new Error('Truncated MP4 box.');size=read64(b,p+8);header=16}
+      if(size===0)size=end-p;
+      if(size<header||p+size>end)throw new Error('The MP4 has an invalid box size.');
+      const n={type,data:b.slice(p+header,p+size),start:p,size,header};
+      if(containers.has(type)||type==='meta'){
+        const prefix=type==='meta'?4:0;n.prefix=n.data.slice(0,prefix);n.children=parse(b,p+header+prefix,p+size,depth+1);
+      }
+      nodes.push(n);p+=size;
+    }
+    return nodes;
+  }
+  function serialize(n){return atom(n.type,n.children?concat([n.prefix||new Uint8Array(),...n.children.map(serialize)]):n.data)}
+  const child=(n,type)=>n?.children?.find(n=>n.type===type);
+  const path=(n,...names)=>names.reduce((node,name)=>child(node,name),n);
+  function leaves(n,type,out=[]){if(n.type===type)out.push(n);for(const c of n.children||[])leaves(c,type,out);return out}
+  function rows(n,width){
+    if(!n||n.data.length<8)throw new Error('Missing MP4 sample table.');
+    const count=read32(n.data,4);if(count>1000000||8+count*width*4>n.data.length)throw new Error('Invalid MP4 sample table length.');
+    return Array.from({length:count},(_,i)=>Array.from({length:width},(_,j)=>read32(n.data,8+4*(i*width+j))));
+  }
+  function setRows(n,values){const width=values[0]?.length||2,b=new Uint8Array(8+values.length*width*4);b.set(n.data.subarray(0,4));write32(b,4,values.length);values.forEach((row,i)=>row.forEach((v,j)=>write32(b,8+4*(i*width+j),v)));n.data=b}
+  function sizes(n){
+    const fixed=read32(n.data,4),count=read32(n.data,8);
+    if(count>1000000||(!fixed&&12+4*count>n.data.length))throw new Error('Invalid MP4 sample sizes.');
+    return Array.from({length:count},(_,i)=>fixed||read32(n.data,12+4*i));
+  }
+  function offsets(n){
+    const width=n.type==='co64'?8:4,count=read32(n.data,4);
+    if(count>1000000||8+count*width>n.data.length)throw new Error('Invalid MP4 chunk offsets.');
+    return Array.from({length:count},(_,i)=>width===8?read64(n.data,8+width*i):read32(n.data,8+width*i));
+  }
+  function setOffsets(n,values){
+    const width=n.type==='co64'?8:4,b=new Uint8Array(8+width*values.length);b.set(n.data.subarray(0,4));write32(b,4,values.length);
+    values.forEach((v,i)=>{if(width===8)view(b).setBigUint64(8+width*i,BigInt(v));else write32(b,8+width*i,v)});n.data=b;
+  }
+  function clock(n){const long=n.data[0]===1;return {scale:read32(n.data,long?20:12),duration:long?read64(n.data,24):read32(n.data,16),scaleOffset:long?20:12,durationOffset:long?24:16,long}}
+  function setDuration(n,duration){const c=clock(n);if(c.long)view(n.data).setBigUint64(c.durationOffset,BigInt(duration));else write32(n.data,c.durationOffset,duration)}
+  function clearDates(n){
+    if(['mvhd','mdhd','tkhd'].includes(n.type)){const bytes=n.data[0]===1?16:8;n.data.fill(0,4,4+bytes)}
+    if(n.children)n.children=n.children.filter(c=>c.type!=='udta'&&c.type!=='meta');
+    for(const c of n.children||[])clearDates(c);
+  }
+  function encoderTag(text){
+    const handler=new Uint8Array(25);handler.set(encoder.encode('mdir'),8);handler.set(encoder.encode('appl'),12);
+    const value=concat([new Uint8Array([0,0,0,1,0,0,0,0]),encoder.encode(text)]);
+    return {type:'udta',data:atom('meta',concat([new Uint8Array(4),atom('hdlr',handler),atom('ilst',atom('\xa9too',atom('data',value)))]))};
+  }
+  function trackInfo(trak){
+    const mdia=child(trak,'mdia'),stbl=path(mdia,'minf','stbl'),handler=child(mdia,'hdlr');
+    return {trak,mdia,stbl,mdhd:child(mdia,'mdhd'),kind:handler?typeAt(handler.data,8):'',stts:child(stbl,'stts'),stsz:child(stbl,'stsz'),stsc:child(stbl,'stsc'),offset:child(stbl,'stco')||child(stbl,'co64')};
+  }
+  function trimAudio(t,movieScale){
+    const edit=path(t.trak,'edts','elst');if(!edit)return;
+    const long=edit.data[0]===1,count=read32(edit.data,4);if(count!==1)return;
+    const segment=long?read64(edit.data,8):read32(edit.data,8),mediaTime=long?Number(view(edit.data).getBigInt64(16)):view(edit.data).getInt32(12);
+    if(mediaTime<0)return;
+    const time=clock(t.mdhd),timings=rows(t.stts,2),total=timings.reduce((n,[count,delta])=>n+count*delta,0);
+    const end=Math.round(segment*time.scale/movieScale)+mediaTime;
+    const last=timings[timings.length-1],delta=last[1]-(total-end);
+    if(end<total&&delta>0&&delta<=last[1]){
+      if(last[0]>1){last[0]--;timings.push([1,delta])}else last[1]=delta;
+      setRows(t.stts,timings);setDuration(t.mdhd,end);
+      // FFmpeg's remux also recalculates the average AAC bitrate in its descriptors.
+      const stsd=child(t.stbl,'stsd'),list=sizes(t.stsz),bitrate=Math.floor(list.reduce((n,v)=>n+v,0)*8*time.scale/end);
+      if(stsd){
+        const d=stsd.data;
+        // Limit bitrate edits to the AAC sample entry's bitrate/decoder descriptors.
+        const old=Math.floor(list.reduce((n,v)=>n+v,0)*8*time.scale/total);
+        if(typeAt(d,12)==='mp4a'&&d.length>=44&&view(d).getUint16(24)===0){
+          let p=44;
+          while(p+8<=d.length){
+            const size=read32(d,p),type=typeAt(d,p+4);if(size<8||p+size>d.length)break;
+            if(type==='btrt'&&size>=20){for(const pos of [p+12,p+16])if(read32(d,pos)===old)write32(d,pos,bitrate)}
+            if(type==='esds'){
+              const end=p+size;
+              // DecoderConfigDescriptor (0x04): object type + stream type + 3-byte buffer size,
+              // then max and average bitrate. Descriptor lengths use up to four 7-bit bytes.
+              for(let q=p+12;q+12<end;q++)if(d[q]===4){
+                let next=q+1,length=0,k=0;
+                while(next<end&&k++<4){const value=d[next++];length=(length<<7)|(value&127);if(!(value&128))break}
+                if(length>=13&&next+length<=end&&d[next]===0x40){for(const pos of [next+5,next+9])if(read32(d,pos)===old)write32(d,pos,bitrate);break}
+              }
+            }
+            p+=size;
+          }
+        }
+      }
+    }
+    const tkhd=child(t.trak,'tkhd');if(tkhd){const pos=tkhd.data[0]===1?28:20;if(tkhd.data[0]===1)view(tkhd.data).setBigUint64(pos,BigInt(segment));else write32(tkhd.data,pos,segment)}
+  }
+  async function topBoxes(blob){
+    const out=[];let start=0;
+    while(start<blob.size){
+      const b=new Uint8Array(await blob.slice(start,start+16).arrayBuffer());if(b.length<8)throw new Error('Truncated MP4.');
+      let size=read32(b,0),header=8;const type=typeAt(b,4);
+      if(size===1){if(b.length<16)throw new Error('Truncated MP4.');size=read64(b,8);header=16}
+      else if(size===0)size=blob.size-start;
+      if(size<header||start+size>blob.size)throw new Error('Invalid MP4 box size.');
+      out.push({start,size,header,type});start+=size;if(out.length>10000)throw new Error('Too many MP4 boxes.');
+    }
+    return out;
+  }
+  async function read(blob){
+    const boxes=await topBoxes(blob),moovs=boxes.filter(b=>b.type==='moov'),mdats=boxes.filter(b=>b.type==='mdat');
+    if(moovs.length!==1||mdats.length!==1||boxes.some(b=>['moof','sidx','mfra'].includes(b.type)))throw new Error('A normal, unfragmented MP4 is needed for this patch.');
+    const m=moovs[0];if(m.size>32*1024*1024)throw new Error('The MP4 index is too large for browser processing.');
+    const moov=parse(new Uint8Array(await blob.slice(m.start,m.start+m.size).arrayBuffer()))[0];
+    const tracks=moov.children.filter(n=>n.type==='trak').map(trackInfo),video=tracks.find(t=>t.kind==='vide');
+    if(!video?.stts||!video.stsz||!video.stsc||!video.offset)throw new Error('The MP4 has no complete video sample tables.');
+    return {boxes,moov,tracks,video,mdat:mdats[0]};
+  }
+  async function patch(blob,{tag='valedits Quality Method https://valedits.xyz'}={}){
+    const {moov,tracks,video,mdat}=await read(blob),movie=clock(child(moov,'mvhd'));
+    let timing=rows(video.stts,2);const realFrames=timing.reduce((n,[count])=>n+count,0),sampleSizes=sizes(video.stsz),chunkOffsets=offsets(video.offset);
+    if(sampleSizes.length!==realFrames){
+      const extra=sampleSizes.length-realFrames;
+      const tail=new Uint8Array(await blob.slice(blob.size-8).arrayBuffer());
+      if(extra>0&&sampleSizes.slice(realFrames).every(n=>n===8)&&chunkOffsets.slice(-extra).every(n=>n===blob.size-8)&&tail.every((n,i)=>n===dummy[i]))return {blob,report:{realFrames,addedEntries:extra,targetEntries:sampleSizes.length,alreadyPatched:true}};
+      throw new Error('The video sample tables are already modified in an unknown way.');
+    }
+    if(!realFrames)throw new Error('The video contains no timed frames.');
+    const targetEntries=Math.ceil(movie.duration/movie.scale*400),addedEntries=Math.max(0,targetEntries-realFrames);
+    if(!addedEntries||targetEntries>1000000)throw new Error('This clip is outside the reference patch limits.');
+    clearDates(moov);
+    for(const t of tracks.filter(t=>t.kind==='soun'))trimAudio(t,movie.scale);
+    let time=clock(video.mdhd);
+    // A 90 kHz video clock lets the final frame use the reference's one-tick duration.
+    if(time.scale<90000&&90000%time.scale===0){
+      const factor=90000/time.scale;timing=timing.map(([n,d])=>[n,d*factor]);
+      const ctts=child(video.stbl,'ctts');if(ctts){const d=ctts.data;for(let i=0;i<read32(d,4);i++){const pos=12+i*8;if(d[0]===1)view(d).setInt32(pos,view(d).getInt32(pos)*factor);else write32(d,pos,read32(d,pos)*factor)}}
+      const edit=path(video.trak,'edts','elst');if(edit){const long=edit.data[0]===1;for(let i=0;i<read32(edit.data,4);i++){const pos=long?16+i*20:12+i*12;const value=long?view(edit.data).getBigInt64(pos):BigInt(view(edit.data).getInt32(pos));if(value>=0n){if(long)view(edit.data).setBigInt64(pos,value*BigInt(factor));else view(edit.data).setInt32(pos,Number(value)*factor)}}}
+      write32(video.mdhd.data,time.scaleOffset,90000);setDuration(video.mdhd,time.duration*factor);time=clock(video.mdhd);
+    }
+    const last=timing[timing.length-1];if(last[0]>1){last[0]--;timing.push([1,1])}else last[1]=1;setRows(video.stts,timing);
+    const sizeData=new Uint8Array(12+targetEntries*4);sizeData.set(video.stsz.data.subarray(0,4));write32(sizeData,8,targetEntries);
+    for(let i=0;i<targetEntries;i++)write32(sizeData,12+4*i,i<realFrames?sampleSizes[i]:8);video.stsz.data=sizeData;
+    const mappings=rows(video.stsc,3);mappings.push([chunkOffsets.length+1,1,mappings[mappings.length-1][2]]);setRows(video.stsc,mappings);
+    const originals=new Map();for(const t of tracks)if(t.offset)originals.set(t.offset,offsets(t.offset));
+    setOffsets(video.offset,[...chunkOffsets,...new Array(addedEntries).fill(0)]);
+    moov.children.push(encoderTag(tag));
+    const stsd=child(video.stbl,'stsd'),codec=typeAt(stsd.data,12);
+    const brand=atom('ftyp',concat([encoder.encode('isom'),new Uint8Array([0,0,2,0]),encoder.encode('isomiso2'+(codec==='hvc1'||codec==='hev1'?'hvc1':'avc1')+'mp41')]));
+    const free=atom('free',new Uint8Array()),moovBytes=serialize(moov);
+    const mediaBytes=mdat.size-mdat.header+dummy.length,mdatHeaderSize=mediaBytes+8>4294967295?16:8;
+    const newPayloadStart=brand.length+free.length+moovBytes.length+mdatHeaderSize,oldPayloadStart=mdat.start+mdat.header;
+    const shift=newPayloadStart-oldPayloadStart,paddingOffset=newPayloadStart+mediaBytes-dummy.length;
+    for(const [node,values] of originals){
+      for(const o of values)if(o<oldPayloadStart||o>=mdat.start+mdat.size)throw new Error('A media chunk points outside the video data.');
+      const adjusted=values.map(n=>n+shift);if(node===video.offset)adjusted.push(...new Array(addedEntries).fill(paddingOffset));setOffsets(node,adjusted);
+    }
+    const header=new Uint8Array(mdatHeaderSize);write32(header,0,mdatHeaderSize===16?1:mediaBytes+8);header.set(encoder.encode('mdat'),4);if(mdatHeaderSize===16)view(header).setBigUint64(8,BigInt(mediaBytes+16));
+    const patched=new Blob([brand,free,serialize(moov),header,blob.slice(oldPayloadStart,mdat.start+mdat.size),dummy],{type:'video/mp4'});
+    return {blob:patched,report:{realFrames,addedEntries,targetEntries,codec,mediaBytesPreserved:mdat.size-mdat.header,videoTimescale:time.scale,alreadyPatched:false}};
+  }
+  async function verify(blob,report){
+    const {video,mdat,moov}=await read(blob),sampleSizes=sizes(video.stsz),timing=rows(video.stts,2),chunkOffsets=offsets(video.offset);
+    const realFrames=timing.reduce((n,[count])=>n+count,0),extra=sampleSizes.length-realFrames;
+    if(realFrames!==report.realFrames||extra!==report.addedEntries||timing[timing.length-1][1]!==1)throw new Error('The reference timing patch did not verify.');
+    if(sampleSizes.slice(realFrames).some(n=>n!==8)||chunkOffsets.slice(-extra).some(n=>n!==mdat.start+mdat.size-8))throw new Error('The reference sample patch did not verify.');
+    const tail=new Uint8Array(await blob.slice(blob.size-8).arrayBuffer());if(tail.some((n,i)=>n!==dummy[i]))throw new Error('The reference padding did not verify.');
+    const tkhd=child(video.trak,'tkhd'),d=tkhd.data;return {width:read32(d,d.length-8)/65536,height:read32(d,d.length-4)/65536,realFrames,addedEntries:extra,movieDuration:clock(child(moov,'mvhd')).duration/clock(child(moov,'mvhd')).scale};
+  }
+  async function detect(blob){
+    try{
+      const {video,mdat}=await read(blob),timing=rows(video.stts,2),count=timing.reduce((n,[c])=>n+c,0),sampleSizes=sizes(video.stsz),extra=sampleSizes.length-count;
+      if(extra<=0)return null;
+      const chunkOffsets=offsets(video.offset),tail=new Uint8Array(await blob.slice(blob.size-8).arrayBuffer());
+      if(timing[timing.length-1][1]!==1||sampleSizes.slice(count).some(n=>n!==8)||chunkOffsets.slice(-extra).some(n=>n!==mdat.start+mdat.size-8)||tail.some((n,i)=>n!==dummy[i]))return null;
+      return {realFrames:count,addedEntries:extra,targetEntries:sampleSizes.length,nominalFPS:clock(video.mdhd).scale/timing[0][1],alreadyPatched:true};
+    }catch{return null}
+  }
+  return {patch,verify,detect};
+}
+
+const referencePatcher=createReferencePatcher();
+// TikTok preparation: fixed 1080p canvas, real 60 FPS, no timestamp scaling.
+let qualityFile=null,qualityInfo=null,qualityURL=null,qualitySourceURL=null;
+let qualitySelection=0,qualityReading=false,qualityCancelRequested=false;
+let qualityConversion=null,qualityEngine=null,qualityMethod='pc';
+const qStatus=t=>$('qualityStatus').textContent=t;
+const qProg=n=>{n=Math.max(0,Math.min(100,Math.round(n)));$('qualityPct').textContent=n+'%';$('qualityBar').style.width=n+'%';$('qualityProgress').setAttribute('aria-valuenow',String(n))};
+function qStep(n){for(let i=1;i<=3;i++)$('qualityStep'+i).classList.toggle('current',i===n)}
+function qThrowIfCancelled(){if(qualityCancelRequested)throw new Error('Processing cancelled.')}
+function qualityDimensions(width,height){
+  // Keep the clip's shape, with a 1080px short edge and a 1920px long-edge cap.
+  const ratio=width/height;
+  if(ratio>=1)return {width:Math.min(1920,Math.round(1080*ratio/2)*2),height:1080};
+  return {width:1080,height:Math.min(1920,Math.round(1080/ratio/2)*2)};
+}
+function qProcessingInfo(info,method=qualityMethod){
+  // Standard FFmpeg output copies compatible AVC only; patched inputs are normalized by encoding.
+  return {...info,lossless:info.lossless&&(method==='pc'||(info.codec==='avc'&&!info.existingPatch))};
+}
+function qClearOutput(){
+  $('qualityResult').classList.remove('show');
+  $('qualityOutputPreview').pause();$('qualityOutputPreview').removeAttribute('src');$('qualityOutputPreview').load();$('qualityOutputPreview').hidden=true;
+  if(qualityURL){URL.revokeObjectURL(qualityURL);qualityURL=null}
+  $('qualityDownload').removeAttribute('href');$('qualityDownload').removeAttribute('download');
+}
+function qReadyStatus(info){
+  if(qualityMethod==='ffmpeg')return info.lossless?'Ready — FFmpeg will preserve the H.264 video and prepare a standard MP4.':'Ready — FFmpeg will convert to a standard 1080p / 60 FPS MP4.';
+  return info.existingPatch&&info.lossless?'Ready — this file already has the PC reference patch.':info.lossless?'Ready — preserve video + apply the PC reference patch.':'Ready — convert to 1080p / 60 FPS, then apply the PC patch.';
+}
+function qUpdateSourceDetails(){
+  if(!qualityInfo)return;
+  const info=qProcessingInfo(qualityInfo);
+  $('qualityTargetInfo').textContent=`${info.targetWidth} × ${info.targetHeight} · 60 FPS video · ${info.lossless&&info.codec==='hevc'?'HEVC':'H.264'} / ${info.audioTrack?'AAC':'no audio'} · ${qualityMethod==='pc'?'PC method':'FFmpeg'}`;
+  $('qualityHint').textContent=qualityMethod==='ffmpeg'
+    ?(info.lossless?'FFmpeg will copy the original H.264 video into a standard MP4.':info.fps<59.9?'FFmpeg will resize the clip and repeat frames to make a normal-speed 60 FPS file.':'FFmpeg will encode H.264 video at 1080p / 60 FPS, keeping normal playback speed.')
+    :(info.existingPatch&&info.lossless?'A PC reference patch is already present — it will not be applied twice.':info.lossless?'Original video bytes will be preserved while the MP4 tables are patched.':info.fps<59.9?'Lower-FPS source: frames will repeat before the PC patch is applied.':'Normal-speed conversion, then the PC MP4 patch. Video and audio stay in sync.');
+}
+function qRefreshMethod(){
+  const pc=qualityMethod==='pc';
+  for(const button of $('qualityMethodSeg').querySelectorAll('button')){
+    const selected=button.dataset.method===qualityMethod;
+    button.classList.toggle('active',selected);button.setAttribute('aria-pressed',String(selected));
+  }
+  $('qualityProfileMethod').textContent=pc?'PC method':'FFmpeg';
+  $('qualityMethodHelp').textContent=pc
+    ?'Best on a desktop browser. Applies the experimental MP4 quality patch. Compatible 1080p / 60 FPS edits keep their original video and AAC audio; other clips are converted first.'
+    :'Exports a standard 1080p / 60 FPS H.264 MP4 with AAC audio at normal speed. Compatible H.264 video is copied; other clips are encoded. The first run downloads FFmpeg, and encoding can take a few minutes.';
+  $('qualityStep2').textContent=pc?'02 · patch MP4':'02 · prepare MP4';
+  $('qualityStep3').textContent=pc?'03 · verify patch':'03 · verify export';
+  $('qualityResultTitle').textContent=pc?'Your PC edit is ready ✦':'Your FFmpeg edit is ready ✦';
+  qUpdateSourceDetails();
+}
+function qLockMethods(busy){for(const button of $('qualityMethodSeg').querySelectorAll('button'))button.disabled=busy}
+for(const button of $('qualityMethodSeg').querySelectorAll('button'))button.onclick=()=>{
+  if(jobBusy||button.dataset.method===qualityMethod)return;
+  qualityMethod=button.dataset.method;qClearOutput();qRefreshMethod();
+  if(!qualityReading){qProg(0);qStep(0);qStatus(qualityInfo?qReadyStatus(qProcessingInfo(qualityInfo)):'Choose a video to begin.')}
+};
+qRefreshMethod();
+function qLock(busy){
+  qLockMethods(busy);
+  $('qualityInput').disabled=busy;
+  $('qualityDrop').classList.toggle('locked',busy);
+  $('qualityCancel').hidden=!busy;
+  $('qualityRun').disabled=busy||qualityReading||!qualityInfo;
+  $('qualityRun').textContent=busy?'processing…':'process video';
+  $('compressRun').disabled=busy||!(compressFile&&compressMeta);
+}
+async function inspectQuality(file){
+  const mb=await loadMediabunny();
+  const input=new mb.Input({formats:mb.ALL_FORMATS,source:new mb.BlobSource(file)});
+  try{
+    const videoTrack=await input.getPrimaryVideoTrack();
+    if(!videoTrack)throw new Error('This file has no video track.');
+    const audioTrack=await input.getPrimaryAudioTrack();
+    const [duration,width,height,codec,audioCodec,rotation,flip,par,config]=await Promise.all([
+      input.computeDuration(),videoTrack.getDisplayWidth(),videoTrack.getDisplayHeight(),
+      videoTrack.getCodec(),audioTrack?audioTrack.getCodec():null,videoTrack.getRotation(),
+      videoTrack.getFlip(),videoTrack.getPixelAspectRatio(),videoTrack.getDecoderConfig()
+    ]);
+    if(!Number.isFinite(duration)||duration<=0||!width||!height)throw new Error('Could not read the video duration or dimensions.');
+    const metrics=await videoTrack.computeFrameRateMetrics({targetPacketCount:256});
+    const existingPatch=await referencePatcher.detect(file);
+    const fps=existingPatch?existingPatch.nominalFPS:metrics.bestGuessFrameRate;
+    if(!Number.isFinite(fps)||fps<=0)throw new Error('Could not read the video frame rate.');
+    const target=qualityDimensions(width,height);
+    const codecString=config?.codec||'';
+    // Baseline, Main or 8-bit High AVC only; bake rotations when conversion is needed.
+    const standardAVC=/^avc[13]\.(42|4d|64)[0-9a-f]{4}$/i.test(codecString)&&parseInt(codecString.slice(-2),16)<=42;
+    let lossless=((codec==='avc'&&standardAVC)||codec==='hevc')&&width===target.width&&height===target.height&&
+      Math.abs(fps-60)<0.001&&metrics.frameRateIsConstant&&rotation===0&&!flip&&par.num===par.den;
+    if(existingPatch&&Math.abs(fps-60)<0.001&&width===target.width&&height===target.height)lossless=true;
+    if(lossless&&!existingPatch){
+      const all=await videoTrack.computeFrameRateMetrics({targetPacketCount:Infinity});
+      lossless=all.frameRateIsConstant&&Math.abs(all.bestGuessFrameRate-60)<0.001;
+    }
+    return {mb,input,videoTrack,audioTrack,duration,width,height,fps,codec,audioCodec,lossless,existingPatch,targetWidth:target.width,targetHeight:target.height,sourceWidth:width,sourceHeight:height};
+  }catch(e){input.dispose();throw e}
+}
+async function chooseQualityFile(f){
+  if(jobBusy)return;
+  const selection=++qualitySelection;
+  qualityReading=true;
+  qualityInfo?.input?.dispose();qualityInfo=null;qualityFile=f;
+  $('qualityRun').disabled=true;qClearOutput();
+  $('qualityFile').textContent=`${f.name} · ${fmtMB(f.size)}`;$('qualityFile').classList.add('show');
+  $('qualitySource').hidden=true;qProg(0);qStep(1);qStatus('Reading your video…');
+  try{
+    if(!f.size)throw new Error('The selected file is empty.');
+    if(f.size>512*1024*1024)throw new Error('Choose a clip below 512 MB for browser processing.');
+    const info=await inspectQuality(f);
+    if(selection!==qualitySelection){info.input.dispose();return}
+    qualityInfo=info;
+    if(qualitySourceURL)URL.revokeObjectURL(qualitySourceURL);
+    qualitySourceURL=URL.createObjectURL(f);$('qualityPreview').src=qualitySourceURL;
+    $('qualitySourceInfo').textContent=`${info.sourceWidth} × ${info.sourceHeight} · ${info.fps.toFixed(2)} FPS · ${info.duration.toFixed(1)} sec`;
+    qUpdateSourceDetails();$('qualitySource').hidden=false;
+    qStatus(qReadyStatus(qProcessingInfo(info)));qStep(0);
+  }catch(e){console.warn('Video inspection failed:',e);if(selection===qualitySelection)qStatus('Could not read clip: '+(String(e?.message||'').includes('processor')?e.message:'This file is damaged or unsupported. Choose another video.'))}
+  finally{if(selection===qualitySelection){qualityReading=false;$('qualityRun').disabled=jobBusy||!qualityInfo}}
+}
+wireDrop($('qualityDrop'),$('qualityInput'),chooseQualityFile);
+async function convertQualityNative(info){
+  const {mb,input,targetWidth:width,targetHeight:height}=info;
+  const target=new mb.BufferTarget();
+  const output=new mb.Output({format:new mb.Mp4OutputFormat({fastStart:'in-memory'}),target});
+  const audioNeedsEncode=info.audioTrack&&info.audioCodec!=='aac';
+  const options={input,output,tracks:'primary',tags:()=>({}),showWarnings:false,
+    video:info.lossless?{}:{width,height,fit:'contain',frameRate:60,codec:'avc',quality:new mb.Quality({bitrate:16000000}),keyFrameInterval:2,forceTranscode:true,allowTransformationMetadata:false},
+    audio:audioNeedsEncode?{codec:'aac',numberOfChannels:2,sampleRate:48000,quality:new mb.Quality({bitrate:192000}),forceTranscode:true}:{}
+  };
+  qualityConversion=await mb.Conversion.init(options);
+  qThrowIfCancelled();
+  if(!qualityConversion.isValid||qualityConversion.discardedTracks.length){
+    throw new Error('The browser cannot encode every required track.');
+  }
+  qualityConversion.onProgress=p=>{if(Number.isFinite(p))qProg(5+p*88)};
+  qStatus(info.lossless?'Repackaging your original frames…':'Encoding 1080p / 60 FPS… keep this tab open.');
+  qualityEngine='native';await qualityConversion.execute();qThrowIfCancelled();
+  if(!target.buffer?.byteLength)throw new Error('No output video was produced.');
+  return new Blob([target.buffer],{type:'video/mp4'});
+}
+async function convertQualityFFmpeg(info,file){
+  qualityEngine='ffmpeg';qStatus('Loading FFmpeg…');
+  await ensureFFmpeg(qStatus);qThrowIfCancelled();
+  const ext=(file.name.match(/\.[a-z0-9]+$/i)||['.mp4'])[0];
+  const inName='quality_input'+ext,outName='quality_output.mp4';
+  try{
+    qStatus('Reading video into FFmpeg…');
+    await ffmpeg.FS('writeFile',inName,new Uint8Array(await file.arrayBuffer()));qThrowIfCancelled();
+    const {targetWidth:w,targetHeight:h}=info;
+    const args=['-y','-i',inName,'-map','0:v:0','-map','0:a:0?','-map_metadata','-1','-map_chapters','-1'];
+    if(info.lossless){args.push('-c:v','copy')}
+    else{args.push('-vf',`fps=60:eof_action=pass,scale=${w}:${h}:force_original_aspect_ratio=decrease:force_divisible_by=2,pad=${w}:${h}:(ow-iw)/2:(oh-ih)/2,setsar=1`,
+      '-c:v','libx264','-preset','veryfast','-crf','18','-profile:v','high','-level:v','4.2','-pix_fmt','yuv420p','-r','60','-vsync','cfr','-g','120')}
+    args.push('-c:a',info.audioCodec==='aac'?'copy':'aac');
+    if(info.audioTrack&&info.audioCodec!=='aac')args.push('-b:a','192k','-ar','48000','-ac','2');
+    args.push('-movflags','+faststart',outName);
+    activeProgress=n=>qProg(5+n*.88);qStatus(info.lossless?'Repackaging original video…':'Encoding 1080p / 60 FPS… this may take a few minutes.');
+    await ffmpeg.run(...args);qThrowIfCancelled();
+    const data=await ffmpeg.FS('readFile',outName);
+    if(!data.length)throw new Error('No output video was produced.');
+    return new Blob([data],{type:'video/mp4'});
+  }finally{
+    activeProgress=null;const engine=ffmpeg;
+    for(const name of [inName,outName])try{await engine?.FS('unlink',name)}catch{}
+    // Use a fresh runtime for each job; downloaded engine assets remain cached.
+    engine?.exit();if(ffmpeg===engine){ffmpeg=null;ffmpegLoaded=false}
+  }
+}
+async function verifyQuality(blob,info){
+  const mb=info.mb,input=new mb.Input({formats:[mb.MP4],source:new mb.BlobSource(blob)});
+  try{
+    const v=await input.getPrimaryVideoTrack(),a=await input.getPrimaryAudioTrack();
+    if(!v)throw new Error('The export has no video track.');
+    const [w,h,codec,duration,metrics,aCodec]=await Promise.all([v.getDisplayWidth(),v.getDisplayHeight(),v.getCodec(),input.computeDuration(),v.computeFrameRateMetrics({targetPacketCount:Infinity}),a?a.getCodec():null]);
+    if(w!==info.targetWidth||h!==info.targetHeight||codec!==(info.lossless?info.codec:'avc')||!metrics.frameRateIsConstant||Math.abs(metrics.bestGuessFrameRate-60)>.01)throw new Error('The export did not meet the 1080p / 60 FPS profile.');
+    if(info.audioTrack&&(!a||aCodec!=='aac'))throw new Error('The export did not retain compatible audio.');
+    if(Math.abs(duration-info.duration)>.25)throw new Error('The export duration changed unexpectedly.');
+    qThrowIfCancelled();
+    return {w,h,duration,fps:metrics.bestGuessFrameRate};
+  }finally{input.dispose()}
+}
+$('qualityCancel').onclick=async()=>{
+  if(!jobBusy)return;
+  qualityCancelRequested=true;$('qualityCancel').disabled=true;qStatus('Cancelling…');
+  try{if(qualityEngine==='native')await qualityConversion?.cancel();if(qualityEngine==='ffmpeg'){ffmpeg?.exit();ffmpeg=null;ffmpegLoaded=false}}catch{}
+};
+$('qualityRun').onclick=async()=>{
+  if(!qualityInfo||jobBusy||qualityReading)return;
+  const method=qualityMethod,info=qProcessingInfo(qualityInfo,method),file=qualityFile;
+  jobBusy=true;qualityCancelRequested=false;qualityEngine=null;qualityConversion=null;
+  $('qualityCancel').disabled=false;qLock(true);qProg(5);qStep(2);qClearOutput();
+  $('qualityPreview').pause();
+  try{
+    let blob,verified,report=null;
+    if(method==='ffmpeg'){
+      blob=await convertQualityFFmpeg(info,file);qThrowIfCancelled();
+      qStep(3);qProg(96);qStatus('Verifying the FFmpeg resolution, frame rate and audio…');
+      verified=await verifyQuality(blob,info);qThrowIfCancelled();
+    }else{
+      let result;
+      // Compatible MP4s take the measured binary path directly, preserving media bytes.
+      if(info.lossless&&(!info.audioTrack||info.audioCodec==='aac')){
+        qStatus('Applying the PC MP4 reference patch…');qProg(35);
+        try{result=await referencePatcher.patch(file)}catch(e){
+          if(!String(e.message).includes('unfragmented'))throw e;
+        }
+      }
+      if(!result){
+        let prepared;
+        try{prepared=await convertQualityNative(info)}catch(e){
+          qThrowIfCancelled();console.warn('Using compatibility encoder:',e);
+          try{await qualityConversion?.cancel()}catch{}qualityConversion=null;
+          prepared=await convertQualityFFmpeg(info,file);
+        }
+        qThrowIfCancelled();await verifyQuality(prepared,info);
+        qStatus('Applying the PC MP4 reference patch…');qProg(93);
+        result=await referencePatcher.patch(prepared);
+      }
+      qThrowIfCancelled();qStep(3);qProg(96);qStatus('Verifying timing, sample entries and media offsets…');
+      const checked=await referencePatcher.verify(result.blob,result.report);qThrowIfCancelled();
+      blob=result.blob;verified={w:checked.width,h:checked.height};report=result.report;
+      if(verified.w!==info.targetWidth||verified.h!==info.targetHeight)throw new Error('The patched resolution did not verify.');
+    }
+    if(qualityURL)URL.revokeObjectURL(qualityURL);qualityURL=URL.createObjectURL(blob);
+    $('qualityDownload').href=qualityURL;$('qualityDownload').download=safeName(file.name.replace(/\.[^.]+$/,'')+`_valedits_${method}_1080p60.mp4`);
+    $('qualityResultSub').textContent=`${verified.w} × ${verified.h} · 60 FPS video · ${fmtMB(blob.size)} · ${method==='ffmpeg'?'FFmpeg export':'PC method'}${info.lossless?' · original video preserved':''}`;
+    $('qualityResult').classList.add('show');$('qualityOutputPreview').src=qualityURL;$('qualityOutputPreview').hidden=false;
+    qProg(100);qStep(0);qStatus(method==='ffmpeg'?'Done — verified FFmpeg 1080p / 60 FPS MP4.':report.alreadyPatched?'Done — existing PC reference patch verified.':'Done — PC reference patch verified. Ready to test on TikTok.');
+  }catch(e){qProg(0);qStep(0);qStatus(qualityCancelRequested?'Cancelled — choose process video to try again.':'Could not finish: '+(e?.message||'unsupported video'))}
+  finally{jobBusy=false;qualityEngine=null;qualityConversion=null;qLock(false)}
+};
+
 let compressFile=null,compressMeta=null,compressURL=null;
 const cStatus=t=>$('compressStatus').textContent=t,
       cProg=n=>{$('compressPct').textContent=n+'%';$('compressBar').style.width=n+'%'};
@@ -84,7 +625,7 @@ const cStatus=t=>$('compressStatus').textContent=t,
 let mediabunnyPromise=null;
 function loadMediabunny(){
   if(!mediabunnyPromise){
-    mediabunnyPromise=import('https://cdn.jsdelivr.net/npm/mediabunny@1.61.0/+esm');
+    mediabunnyPromise=Promise.race([import('https://cdn.jsdelivr.net/npm/mediabunny@1.61.0/+esm'),new Promise((_,reject)=>setTimeout(()=>reject(new Error('Video processor download timed out.')),30000))]).catch(e=>{mediabunnyPromise=null;throw new Error('Could not load the video processor. Check your connection and try again.');});
   }
   return mediabunnyPromise;
 }
@@ -169,6 +710,7 @@ function calculateTargetBitrates(duration){
 }
 
 wireDrop($('compressDrop'),$('compressInput'),async f=>{
+  if(jobBusy)return;
   compressFile=f;
   compressMeta=null;
   $('compressFile').textContent=`${f.name} · ${fmtMB(f.size)}`;
@@ -226,7 +768,8 @@ wireDrop($('compressDrop'),$('compressInput'),async f=>{
 $('compressRun').onclick=async()=>{
   if(!compressFile||!compressMeta||jobBusy)return;
 
-  jobBusy=true;
+  jobBusy=true;qLockMethods(true);
+  $('qualityRun').disabled=true;
   $('compressRun').disabled=true;
   $('compressResult').classList.remove('show');
   cProg(0);
@@ -321,7 +864,8 @@ $('compressRun').onclick=async()=>{
     cProg(0);
     cStatus('Failed: '+(e?.message||'the browser encoder could not process this clip'));
   }finally{
-    jobBusy=false;
+    jobBusy=false;qLockMethods(false);
+    $('qualityRun').disabled=qualityReading||!qualityInfo;
     $('compressRun').disabled=!(compressFile&&compressMeta);
   }
 };
